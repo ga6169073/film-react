@@ -1,0 +1,31 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+
+body, html {
+    background-image: "#fff";
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.content-container {
+    .title {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 15px;
+      color: green;
+    }
+    .content {
+      margin: 15px 30px;
+      box-shadow: 2px 2px 4px 0 #0000004d;
+      -webkit-box-shadow: 2px 2px 4px 0 #0000004d;
+    }
+  }

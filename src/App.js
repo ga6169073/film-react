@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from './components/Login';
+import './App.scss';
+import {
+  Route, Routes, BrowserRouter
+} from 'react-router-dom';
+import { connect } from 'react-redux';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// import { ConnectedRouter as Router } from 'connected-react-router';
+import { Component, Fragment } from 'react';
+
+class App extends Component {
+  render() {
+    return (
+      <Fragment>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Login />} />
+          </Routes>
+        </BrowserRouter>
+      </Fragment>
+    )
+  }
+
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    // started: state.app.started,
+    // isLoggedIn: state.user.isLoggedIn
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
