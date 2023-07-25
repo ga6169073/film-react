@@ -1,4 +1,4 @@
-import Login from './components/Login';
+import Login from './pages/Login';
 import './App.scss';
 import {
   Route, Routes, BrowserRouter
@@ -6,7 +6,8 @@ import {
 import { connect } from 'react-redux';
 
 // import { ConnectedRouter as Router } from 'connected-react-router';
-import { Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
+import Home from './pages/Home';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Login />} />
+            <Route path="/home" element={<Home />} />
           </Routes>
         </BrowserRouter>
       </Fragment>
