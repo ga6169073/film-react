@@ -1,0 +1,12 @@
+.container-page { 
+    display: flex;
+    background-color: white;
+    .container-main {
+        display: flex;
+        width: 100%;
+        margin-top: 70px;
+        .container-data {
+            flex: 6;
+        }
+    }
+}
