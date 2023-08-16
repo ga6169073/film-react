@@ -114,7 +114,10 @@ const Header = () => {
                         </>
                         :
                         <li className="menuItem">
-                            <div onClick={navigate("/login")}>Login</div>
+                            <div onClick={() => {
+                                navigate("/login");
+                                navigate(0);
+                            }}>Login</div>
                         </li>
                     }
                     <li
